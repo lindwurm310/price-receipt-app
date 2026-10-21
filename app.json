@@ -8,7 +8,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.pricememo"
+      "bundleIdentifier": "com.lindwurm310.pricememo",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +21,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.example.pricememo"
+      "package": "com.lindwurm310.pricememo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
