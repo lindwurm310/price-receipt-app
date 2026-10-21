@@ -1,25 +1,56 @@
 {
   "expo": {
-    "name": "price-receipt-app",
+    "name": "ねだんメモ",
     "slug": "price-receipt-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.example.pricememo"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FDE4EC",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.example.pricememo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-image",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "レシートとバーコードを読み取るためにカメラを使います。"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "保存済みのレシート写真を読み取るために使います。",
+          "cameraPermission": "レシートを撮影するためにカメラを使います。"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "近所のお店を判定するために現在地を使います。"
+        }
+      ]
+    ],
+    "scheme": "pricememo",
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
